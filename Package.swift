@@ -31,7 +31,10 @@ let package = Package(
       dependencies: [
         .target(name: "MetaAdapter"),
       ],
-      path: "MetaAdapterTarget"
+      path: "MetaAdapterTarget",
+      linkerSettings: [
+        .linkedFramework("AppTrackingTransparency")
+      ]
     ),
     .binaryTarget(
       name: "MetaAdapter",
